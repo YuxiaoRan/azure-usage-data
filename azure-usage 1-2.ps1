@@ -18,9 +18,9 @@ $subscriptions = Get-AzureRmSubscription
 # Use for-each to loop over all subscriptions
 ForEach($sub in $subscriptions){
     $subId = $sub.subscriptionId
-    Select-AzureRmSubscription -SubscriptionId $subId
     Write-Host
     Write-Host "Working on " $subId
+    Select-AzureRmSubscription -SubscriptionId $subId
     Write-Host
     
     # Set path to exported CSV file
