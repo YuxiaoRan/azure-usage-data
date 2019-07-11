@@ -1,8 +1,17 @@
+# Import
+Import-Module -Name AzureRM.UsageAggregates
+
 # Set date range for exported usage data
-$reportedStartTime = "2019-05-27"
+$reportedStartTime = "2019-06-25"
 $reportedEndTime = "2019-06-26"
-# Authenticate to Azure
-Connect-AzureRmAccount
+
+# Login
+# Prereq: Authenticate to Azure:
+# PS> Connect-AzureRmAccount
+# PS> Save-AzureRmProfile -Path "c:\Users\sran\Documents\Azure_PowerShell_Scripts\credentials\sran_profile.json"
+# Auto-Login:
+Import-AzureRmContext -Path "c:\Users\sran\Documents\Azure_PowerShell_Scripts\credentials\sran_profile.json"
+
 # Select an Azure Subscription for which to report usage data
 $subscriptionId = 
     (Get-AzureRmSubscription |
@@ -10,11 +19,14 @@ $subscriptionId =
         -Title "Select an Azure Subscription ..." `
         -PassThru).SubscriptionId
 Select-AzureRmSubscription -SubscriptionId $subscriptionId
+
 # Set path to exported CSV file
 $filename = "c:\Users\sran\Documents\Azure_PowerShell_Scripts\usageData-${subscriptionId}-${reportedStartTime}-${reportedEndTime}.csv"
+
 # Set usage parameters
 $granularity = "Daily" # Can be Hourly or Daily
 $showDetails = $true
+
 # Export Usage to CSV
 $appendFile = $false
 $continuationToken = $null
