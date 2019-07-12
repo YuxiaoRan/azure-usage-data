@@ -1,4 +1,11 @@
 # azure-usage-data
+Author: Yuxiao "Sean" Ran
+
+Date: 7/11/2019
+
+Last Update: 7/12/2019
+
+## Description
 Azure PowerShell scripts that automate Azure usage data retrievals
 
 ## V2-0 (built with Get-UsageAggregates)
