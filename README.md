@@ -1,10 +1,10 @@
 # azure-usage-data
 Azure PowerShell scripts that automate Azure usage data retrievals
 
-## V2-0 (Get-UsageAggregates)
+## V2-0 (built with Get-UsageAggregates)
 Auto-login and get "Consumption Usage Detail" of all accessible Azure subscriptions.
 
-## V1-2 (Get-AzureRmConsumptionUsageDetail)
+## V1-2 (built with Get-AzureRmConsumptionUsageDetail)
 Auto-login and get "Usage Aggregates" of all accessible Azure subscriptions.
 
 ## Older Versions
