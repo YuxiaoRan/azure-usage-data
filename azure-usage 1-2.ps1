@@ -24,7 +24,7 @@ ForEach($sub in $subscriptions){
     Write-Host
     
     # Set path to exported CSV file
-    $filename = "c:\Users\sran\Documents\Azure_PowerShell_Scripts\usageData-${subId}-${reportedStartTime}-${reportedEndTime}.csv"
+    $filename = "c:\Users\sran\Documents\Azure_PowerShell_Scripts\usageData\usageData-${subId}-${reportedStartTime}-${reportedEndTime}.csv"
 
     # Set usage parameters
     $granularity = "Daily" # Can be Hourly or Daily
