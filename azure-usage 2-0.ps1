@@ -1,6 +1,6 @@
 # Set date range for exported usage data
-$startDate = "2019-06-25"
-$endDate = "2019-06-26"
+$startDate = "2019-06-15"
+$endDate = "2019-07-14"
 
 # Login
 # Prereq: Authenticate to Azure:
