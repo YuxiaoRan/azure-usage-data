@@ -66,7 +66,7 @@ ForEach($sub in $subscriptions){
                 ,'$($_.MeterCategory)','$($_.MeterLocation)','$($_.MeterName)','$($_.MeterSubCategory)','$($_.Unit)','$($_.MeterId)'
                 ,'$($_.Name)','$($_.PretaxCost)','$($_.SubscriptionGuid)','$($_.SubscriptionName)','$($_.UsageStart)','$($_.UsageEnd)','$($_.UsageQuantity)')"
         }
-        Remove-Item "c:\Users\sran\Documents\testData\usageData-${subId}-${date}.csv"
+        #Remove-Item "c:\Users\sran\Documents\testData\usageData-${subId}-${date}.csv"
     }
     Catch{
         Write-Host "Data Not Found"
