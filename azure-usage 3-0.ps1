@@ -1,8 +1,12 @@
 # Set date range for exported usage data
-$date = "2019-07-15"
+$date = "2019-07-22"
 
 # Login
-Connect-AzureRmAccount
+# Prereq: Authenticate to Azure:
+# PS> Connect-AzureRmAccount
+# PS> Save-AzureRmProfile -Path "c:\Users\sran\Documents\Azure_PowerShell_Scripts\credentials\sran_profile.json"
+# Auto-Login:
+Import-AzureRmContext -Path "c:\Users\sran\Documents\Azure_PowerShell_Scripts\credentials\sran_profile.json"
 
 # Connect to DB
 $database = 'test_import_2'
